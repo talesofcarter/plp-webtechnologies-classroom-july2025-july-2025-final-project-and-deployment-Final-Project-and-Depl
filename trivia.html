@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/trivia.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <title>Trivia Quiz - Play</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-brand">
+        <a href="index.html">Trivia Game</a>
+      </div>
+      <nav class="navbar-links" id="navbarLinks">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="trivia.html" class="nav-link">Trivia</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </header>
+
+    <main class="quiz-main-content">
+      <div class="quiz-container">
+        <div id="quiz-header" class="quiz-header">
+          <div id="progress-text" class="progress-text">Question 1 of 10</div>
+          <div id="progress-bar-container" class="progress-bar-container">
+            <div id="progress-bar-fill" class="progress-bar-fill"></div>
+          </div>
+        </div>
+        <div id="question-container" class="question-container">
+          <h2 id="question"></h2>
+          <div id="answer-buttons" class="answer-buttons">
+            <button class="answer-btn"></button>
+            <button class="answer-btn"></button>
+            <button class="answer-btn"></button>
+            <button class="answer-btn"></button>
+          </div>
+        </div>
+        <div class="score-container">
+          <h3 id="current-score">Score: 0</h3>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="js/trivia.js"></script>
+  </body>
+</html>
