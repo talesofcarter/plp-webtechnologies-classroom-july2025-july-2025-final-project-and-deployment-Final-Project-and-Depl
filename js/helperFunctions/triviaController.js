@@ -1,4 +1,4 @@
-import { questions } from "./triviaModel.js";
+import { questionsByCategory } from "./triviaModel.js";
 import {
   renderProgress,
   renderQuestion,
@@ -8,17 +8,54 @@ import {
 
 let currentQuestionIndex = 0;
 let score = 0;
+let currentQuestions = [];
+let category = "";
+
+// DOM elements for the modal and feedback section
+const resultsModal = document.getElementById("resultsModal");
+const finalScoreElement = document.getElementById("finalScore");
+const restartButton = document.getElementById("restartBtn");
+const feedbackSection = document.getElementById("feedback-section");
+const feedbackTitle = document.getElementById("feedback-title");
+const explanationText = document.getElementById("explanation-text");
+
+function getCategoryFromUrl() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const category = urlParams.get("category");
+  return category || "general"; // Default to 'general' if no category is specified
+}
+
+function showFeedback(isCorrect, explanation) {
+  feedbackSection.classList.add("visible");
+
+  if (isCorrect) {
+    feedbackSection.classList.add("correct");
+    feedbackTitle.classList.add("correct");
+    feedbackTitle.textContent = "Correct! ✅";
+  } else {
+    feedbackSection.classList.add("incorrect");
+    feedbackTitle.classList.add("incorrect");
+    feedbackTitle.textContent = "Incorrect! ❌";
+  }
+  explanationText.textContent = explanation;
+}
+
+function hideFeedback() {
+  feedbackSection.classList.remove("visible");
+  feedbackSection.classList.remove("correct", "incorrect");
+  feedbackTitle.classList.remove("correct", "incorrect");
+}
 
 function handleAnswerClick(event) {
   const selectedButton = event.target;
   const selectedAnswer = selectedButton.textContent;
-  const currentQuestion = questions[currentQuestionIndex];
+  const currentQuestion = currentQuestions[currentQuestionIndex];
   const isCorrect = selectedAnswer === currentQuestion.answer;
 
   highlightAnswer(isCorrect, selectedButton);
 
   if (isCorrect) {
-    score++;
+    score += 10;
     renderScore(score);
   }
 
@@ -26,32 +63,66 @@ function handleAnswerClick(event) {
   const answerButtons = document.querySelectorAll(".answer-btn");
   answerButtons.forEach((button) => (button.disabled = true));
 
+  // Show feedback and explanation
+  showFeedback(isCorrect, currentQuestion.explanation);
+
   // Move to the next question after a delay
   setTimeout(() => {
+    hideFeedback(); // Hide the feedback section
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex < currentQuestions.length) {
       startQuestion();
     } else {
-      // End of quiz logic here
-      alert(
-        `Quiz Finished! Your score is ${score} out of ${questions.length}.`
-      );
+      showResultsModal();
     }
-  }, 1000); // 1-second delay
+  }, 10000); // 3-second delay to give user time to read
+}
+
+function showResultsModal() {
+  finalScoreElement.textContent = `${score} / ${currentQuestions.length}`;
+  resultsModal.classList.add("visible");
+}
+
+function restartQuiz() {
+  // Reset game state
+  currentQuestionIndex = 0;
+  score = 0;
+
+  // Hide modal
+  resultsModal.classList.remove("visible");
+
+  // Restart quiz from the beginning of the same category
+  startQuiz();
 }
 
 export function startQuiz() {
+  category = getCategoryFromUrl();
+  currentQuestions = questionsByCategory[category];
+
+  if (!currentQuestions) {
+    console.error("Category not found:", category);
+    currentQuestions = questionsByCategory["general"];
+  }
+
+  renderScore(score);
+
   startQuestion();
 }
 
 function startQuestion() {
-  const currentQuestion = questions[currentQuestionIndex];
-  renderProgress(currentQuestionIndex, questions.length);
+  // Re-enable buttons from a previous round if any
+  const answerButtons = document.querySelectorAll(".answer-btn");
+  answerButtons.forEach((button) => (button.disabled = false));
+
+  const currentQuestion = currentQuestions[currentQuestionIndex];
+  renderProgress(currentQuestionIndex, currentQuestions.length);
   renderQuestion(currentQuestion);
 
-  // Add event listeners to the new buttons
-  const answerButtons = document.querySelectorAll(".answer-btn");
-  answerButtons.forEach((button) => {
+  const newAnswerButtons = document.querySelectorAll(".answer-btn");
+  newAnswerButtons.forEach((button) => {
     button.addEventListener("click", handleAnswerClick);
   });
 }
+
+// Add event listener to the restart button
+restartButton.addEventListener("click", restartQuiz);

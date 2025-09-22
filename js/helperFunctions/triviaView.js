@@ -34,7 +34,7 @@ export function renderQuestion(questionData) {
 export function renderScore(score) {
   const scoreElement = document.getElementById("current-score");
   if (scoreElement) {
-    scoreElement.textContent = `Score: ${score}`;
+    scoreElement.textContent = `Score: ${score}${score === 0 ? "" : "%"}`;
   }
 }
 

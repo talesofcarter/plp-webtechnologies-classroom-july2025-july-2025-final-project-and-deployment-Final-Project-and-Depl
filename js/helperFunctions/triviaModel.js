@@ -1,458 +1,616 @@
-export const questions = [
-  {
-    question:
-      "What is the process by which plants convert light energy into chemical energy?",
-    options: ["Respiration", "Transpiration", "Fermentation", "Photosynthesis"],
-    answer: "Photosynthesis",
-  },
-  {
-    question: "What is the largest organ of the human body?",
-    options: ["Liver", "Brain", "Heart", "The skin"],
-    answer: "The skin",
-  },
-  {
-    question: "What element is essential for all life forms on Earth?",
-    options: ["Oxygen", "Nitrogen", "Carbon", "Hydrogen"],
-    answer: "Carbon",
-  },
-  {
-    question:
-      "Which law of thermodynamics states that energy cannot be created or destroyed?",
-    options: [
-      "The Third Law of Thermodynamics",
-      "The First Law of Thermodynamics",
-      "The Law of Conservation of Mass",
-      "The Second Law of Thermodynamics",
-    ],
-    answer: "The First Law of Thermodynamics",
-  },
-  {
-    question:
-      "What is the process of a solid turning directly into a gas, without passing through the liquid phase?",
-    options: ["Deposition", "Melting", "Sublimation", "Condensation"],
-    answer: "Sublimation",
-  },
-  {
-    question: "What is the hardest known natural mineral?",
-    options: ["Corundum", "Topaz", "Diamond", "Quartz"],
-    answer: "Diamond",
-  },
-  {
-    question: "What is the most abundant gas in Earth's atmosphere?",
-    options: ["Oxygen", "Argon", "Carbon Dioxide", "Nitrogen"],
-    answer: "Nitrogen",
-  },
-  {
-    question: "Which planet is known for its prominent rings?",
-    options: ["Jupiter", "Uranus", "Neptune", "Saturn"],
-    answer: "Saturn",
-  },
-  {
-    question: "What is the fundamental unit of heredity?",
-    options: ["The chromosome", "The gene", "The DNA", "The cell"],
-    answer: "The gene",
-  },
-  {
-    question: "What type of radiation is used in medical imaging to see bones?",
-    options: ["Gamma rays", "X-rays", "Ultraviolet rays", "Infrared rays"],
-    answer: "X-rays",
-  },
-  {
-    question: "What is the chemical symbol for gold?",
-    options: ["Ag", "Fe", "Au", "Cu"],
-    answer: "Au",
-  },
-  {
-    question: "Who proposed the theory of relativity?",
-    options: [
-      "Isaac Newton",
-      "Niels Bohr",
-      "Galileo Galilei",
-      "Albert Einstein",
-    ],
-    answer: "Albert Einstein",
-  },
-  {
-    question: "What is the name of the process by which a star explodes?",
-    options: ["Nebula", "Quasar", "Supernova", "Black hole"],
-    answer: "Supernova",
-  },
-  {
-    question:
-      "What is the phenomenon where light bends as it passes from one medium to another?",
-    options: ["Reflection", "Diffraction", "Refraction", "Interference"],
-    answer: "Refraction",
-  },
-  {
-    question: "Who was the first emperor of Rome?",
-    options: ["Julius Caesar", "Nero", "Caligula", "Augustus Caesar"],
-    answer: "Augustus Caesar",
-  },
-  {
-    question: "The Hundred Years' War was fought between which two countries?",
-    options: [
-      "Germany and Russia",
-      "England and France",
-      "Spain and Portugal",
-      "Italy and Austria",
-    ],
-    answer: "England and France",
-  },
-  {
-    question:
-      "What was the primary cause of the Opium Wars in the 19th century?",
-    options: [
-      "Territorial disputes",
-      "Religious conflict",
-      "The British desire to trade opium for Chinese goods",
-      "The American Revolution",
-    ],
-    answer: "The British desire to trade opium for Chinese goods",
-  },
-  {
-    question: "Who was the last pharaoh of ancient Egypt?",
-    options: ["Nefertiti", "Tutankhamun", "Cleopatra VII", "Ramesses II"],
-    answer: "Cleopatra VII",
-  },
-  {
-    question: "The Renaissance began in which country?",
-    options: ["France", "Germany", "Spain", "Italy"],
-    answer: "Italy",
-  },
-  {
-    question: "What treaty officially ended World War I?",
-    options: [
-      "Treaty of Paris",
-      "Treaty of Versailles",
-      "Treaty of Ghent",
-      "Treaty of Tordesillas",
-    ],
-    answer: "The Treaty of Versailles",
-  },
-  {
-    question: "The 'Boston Tea Party' was a protest against which act?",
-    options: [
-      "The Stamp Act",
-      "The Quartering Act",
-      "The Tea Act",
-      "The Sugar Act",
-    ],
-    answer: "The Tea Act",
-  },
-  {
-    question: "In what year did the Berlin Wall fall?",
-    options: ["1985", "1991", "1989", "1979"],
-    answer: "1989",
-  },
-  {
-    question: "Who was the first woman to fly solo across the Atlantic Ocean?",
-    options: [
-      "Bessie Coleman",
-      "Harriet Quimby",
-      "Jacqueline Cochran",
-      "Amelia Earhart",
-    ],
-    answer: "Amelia Earhart",
-  },
-  {
-    question:
-      "Which famous general led the Carthaginian army in the Second Punic War?",
-    options: [
-      "Scipio Africanus",
-      "Julius Caesar",
-      "Hannibal Barca",
-      "Alexander the Great",
-    ],
-    answer: "Hannibal Barca",
-  },
-  {
-    question:
-      "What was the name of the ship on which Charles Darwin traveled and developed his theory of evolution?",
-    options: ["HMS Endeavour", "HMS Beagle", "USS Constitution", "Santa Maria"],
-    answer: "HMS Beagle",
-  },
-  {
-    question:
-      "Who was the leader of the Soviet Union during the Cuban Missile Crisis?",
-    options: [
-      "Joseph Stalin",
-      "Mikhail Gorbachev",
-      "Vladimir Lenin",
-      "Nikita Khrushchev",
-    ],
-    answer: "Nikita Khrushchev",
-  },
-  {
-    question:
-      "What was the name of the ancient trade route that connected the East and West?",
-    options: [
-      "The Spice Route",
-      "The Silk Road",
-      "The Amber Road",
-      "The Incense Route",
-    ],
-    answer: "The Silk Road",
-  },
-  {
-    question: "What event is considered the start of the Great Depression?",
-    options: [
-      "The end of World War I",
-      "The stock market crash of 1929",
-      "The Dust Bowl",
-      "The election of Franklin D. Roosevelt",
-    ],
-    answer: "The stock market crash of 1929",
-  },
-  {
-    question:
-      "In Judaism, what is the name of the holy book containing the five books of Moses?",
-    options: ["The Talmud", "The Torah", "The Tanakh", "The Zohar"],
-    answer: "The Torah",
-  },
-  {
-    question: "Who is considered the founder of Buddhism?",
-    options: ["Laozi", "Confucius", "Mahavira", "Siddhartha Gautama"],
-    answer: "Siddhartha Gautama",
-  },
-  {
-    question:
-      "What is the name of the holy city for Muslims, where the Kaaba is located?",
-    options: ["Jerusalem", "Medina", "Mecca", "Baghdad"],
-    answer: "Mecca",
-  },
-  {
-    question:
-      "In Christianity, what is the name of the event where Jesus was resurrected from the dead?",
-    options: ["Christmas", "Pentecost", "Ascension", "Easter"],
-    answer: "Easter",
-  },
-  {
-    question:
-      "What is the concept of a person's good or bad actions determining their fate in future lives, a key principle in Hinduism and Buddhism?",
-    options: ["Dharma", "Samsara", "Karma", "Moksha"],
-    answer: "Karma",
-  },
-  {
-    question: "Which prophet is considered the founder of Islam?",
-    options: ["Abraham", "Jesus", "Moses", "Muhammad"],
-    answer: "Muhammad",
-  },
-  {
-    question: "In which sacred text is the Sermon on the Mount found?",
-    options: [
-      "The Qur'an",
-      "The Torah",
-      "The New Testament (specifically, the Gospel of Matthew)",
-      "The Bhagavad Gita",
-    ],
-    answer: "The New Testament (specifically, the Gospel of Matthew)",
-  },
-  {
-    question: "What is the holy river in Hinduism?",
-    options: ["The Indus", "The Ganges", "The Yamuna", "The Brahmaputra"],
-    answer: "The Ganges",
-  },
-  {
-    question:
-      "What is the term for the monotheistic religion founded in the 19th century by Baháʼu'lláh?",
-    options: ["Sikhism", "Jainism", "Baháʼí Faith", "Zoroastrianism"],
-    answer: "Baháʼí Faith",
-  },
-  {
-    question: "What is the Jewish coming-of-age ritual for a boy?",
-    options: ["Bat Mitzvah", "Shabbat", "Rosh Hashanah", "Bar Mitzvah"],
-    answer: "Bar Mitzvah",
-  },
-  {
-    question: "What is the unit of electrical resistance?",
-    options: ["Ampere", "Volt", "Watt", "The Ohm"],
-    answer: "The Ohm",
-  },
-  {
-    question:
-      "What is the principle that states an object immersed in a fluid is buoyed up by a force equal to the weight of the fluid displaced by the object?",
-    options: [
-      "Pascal's Principle",
-      "Bernoulli's Principle",
-      "Archimedes' Principle",
-      "Newton's Third Law",
-    ],
-    answer: "Archimedes' Principle",
-  },
-  {
-    question:
-      "What is the name for the minimum velocity needed for an object to escape a planet's gravitational pull?",
-    options: [
-      "Terminal velocity",
-      "Orbital velocity",
-      "Escape velocity",
-      "Speed of light",
-    ],
-    answer: "Escape velocity",
-  },
-  {
-    question:
-      "What is the term for the amount of heat required to change a liquid into a gas at a constant temperature?",
-    options: [
-      "Specific heat",
-      "Latent heat of fusion",
-      "Latent heat of vaporization",
-      "Heat capacity",
-    ],
-    answer: "Latent heat of vaporization",
-  },
-  {
-    question: "Who formulated the three laws of motion?",
-    options: [
-      "Sir Isaac Newton",
-      "Galileo Galilei",
-      "Johannes Kepler",
-      "Nikola Tesla",
-    ],
-    answer: "Sir Isaac Newton",
-  },
-  {
-    question:
-      "What is the particle responsible for carrying the electromagnetic force?",
-    options: ["The electron", "The proton", "The neutron", "The photon"],
-    answer: "The photon",
-  },
-  {
-    question: "What theory describes gravity as a curvature of spacetime?",
-    options: [
-      "Quantum Mechanics",
-      "Special Relativity",
-      "General Relativity",
-      "String Theory",
-    ],
-    answer: "General Relativity",
-  },
-  {
-    question:
-      "What is the name of the effect where a wave's frequency appears to change as its source moves relative to an observer?",
-    options: [
-      "The Doppler Effect",
-      "The Compton Effect",
-      "The Photoelectric Effect",
-      "The Hall Effect",
-    ],
-    answer: "The Doppler Effect",
-  },
-  {
-    question:
-      "What is the name of the quantum mechanical principle that states no two identical fermions can occupy the same quantum state simultaneously?",
-    options: [
-      "Heisenberg's Uncertainty Principle",
-      "The Pauli Exclusion Principle",
-      "Bohr's Correspondence Principle",
-      "De Broglie's Hypothesis",
-    ],
-    answer: "The Pauli Exclusion Principle",
-  },
-  {
-    question: "What is the name of the world's most venomous snake?",
-    options: [
-      "Black Mamba",
-      "King Cobra",
-      "Coastal Taipan",
-      "The Inland Taipan",
-    ],
-    answer: "The Inland Taipan",
-  },
-  {
-    question: "Which country is the world's largest producer of coffee?",
-    options: ["Colombia", "Vietnam", "Brazil", "Ethiopia"],
-    answer: "Brazil",
-  },
-  {
-    question: "What is the term for the fear of long words?",
-    options: [
-      "Ablutophobia",
-      "Phobophobia",
-      "Hippopotomonstrosesquippedaliophobia",
-      "Xenophobia",
-    ],
-    answer: "Hippopotomonstrosesquippedaliophobia",
-  },
-  {
-    question: "Who is the author of 'The Hobbit' and 'The Lord of the Rings'?",
-    options: [
-      "C.S. Lewis",
-      "George R.R. Martin",
-      "J.R.R. Tolkien",
-      "Neil Gaiman",
-    ],
-    answer: "J.R.R. Tolkien",
-  },
-  {
-    question: "What is the term for a group of crows?",
-    options: ["A flock", "A pack", "A gang", "A murder"],
-    answer: "A murder",
-  },
-  {
-    question: "Which famous artist is known for painting the 'Mona Lisa'?",
-    options: [
-      "Pablo Picasso",
-      "Vincent van Gogh",
-      "Michelangelo",
-      "Leonardo da Vinci",
-    ],
-    answer: "Leonardo da Vinci",
-  },
-  {
-    question: "What is the largest living species of lizard?",
-    options: ["Gila monster", "Komodo Dragon", "Iguana", "Monitor Lizard"],
-    answer: "Komodo Dragon",
-  },
-  {
-    question: "What is the highest mountain in Africa?",
-    options: [
-      "Mount Kenya",
-      "Mount Elgon",
-      "Mount Kilimanjaro",
-      "Table Mountain",
-    ],
-    answer: "Mount Kilimanjaro",
-  },
-  {
-    question: "Which country has the most volcanoes?",
-    options: ["Japan", "United States", "Indonesia", "Chile"],
-    answer: "Indonesia",
-  },
-  {
-    question: "What is the main ingredient of guacamole?",
-    options: ["Tomato", "Onion", "Avocado", "Lime"],
-    answer: "Avocado",
-  },
-  {
-    question: "What is the name of the world's longest river?",
-    options: ["The Amazon", "The Nile", "The Mississippi", "The Yangtze"],
-    answer: "The Nile",
-  },
-  {
-    question: "Who painted the 'Starry Night'?",
-    options: [
-      "Claude Monet",
-      "Pablo Picasso",
-      "Vincent van Gogh",
-      "Leonardo da Vinci",
-    ],
-    answer: "Vincent van Gogh",
-  },
-  {
-    question: "In which city is the famous landmark 'The Colosseum' located?",
-    options: ["Paris", "Athens", "Rome", "Cairo"],
-    answer: "Rome",
-  },
-  {
-    question:
-      "What is the name of the process where a caterpillar becomes a butterfly?",
-    options: ["Mitosis", "Metamorphosis", "Mutation", "Reproduction"],
-    answer: "Metamorphosis",
-  },
-  {
-    question: "What is the world's most populous country?",
-    options: ["China", "United States", "India", "Russia"],
-    answer: "India",
-  },
-];
+export const questionsByCategory = {
+  maths: [
+    {
+      question: "What is the square root of 64?",
+      options: ["6", "7", "8", "9"],
+      answer: "8",
+      explanation: "The square root of 64 is 8, because 8 × 8 = 64.",
+    },
+    {
+      question: "What is the value of Pi (π) to two decimal places?",
+      options: ["3.12", "3.14", "3.16", "3.18"],
+      answer: "3.14",
+      explanation:
+        "Pi (π) represents the ratio of a circle’s circumference to its diameter. Its approximate value is 3.14.",
+    },
+    {
+      question:
+        "What is the next number in the Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, ...?",
+      options: ["11", "12", "13", "14"],
+      answer: "13",
+      explanation:
+        "Each Fibonacci number is the sum of the two preceding ones. 5 + 8 = 13.",
+    },
+    {
+      question:
+        "What is the area of a circle with a radius of 5 cm? (use π ≈ 3.14)",
+      options: ["78.5 cm²", "25 cm²", "15.7 cm²", "50 cm²"],
+      answer: "78.5 cm²",
+      explanation: "Area = πr² = 3.14 × 5² = 78.5 cm².",
+    },
+    {
+      question: "In algebra, what is the value of 'x' if 3x + 7 = 22?",
+      options: ["5", "6", "7", "8"],
+      answer: "5",
+      explanation: "Subtract 7 from 22 → 15. Divide 15 by 3 → x = 5.",
+    },
+    {
+      question: "What is the name for a polygon with eight sides?",
+      options: ["Hexagon", "Octagon", "Pentagon", "Decagon"],
+      answer: "Octagon",
+      explanation: "A polygon with 8 sides and 8 angles is called an octagon.",
+    },
+    {
+      question: "What is 15% of 200?",
+      options: ["20", "30", "40", "50"],
+      answer: "30",
+      explanation: "15% × 200 = 0.15 × 200 = 30.",
+    },
+    {
+      question: "How many degrees are in a triangle?",
+      options: ["90°", "180°", "270°", "360°"],
+      answer: "180°",
+      explanation: "The interior angles of any triangle always add up to 180°.",
+    },
+    {
+      question: "What is the value of 5! (5 factorial)?",
+      options: ["25", "50", "100", "120"],
+      answer: "120",
+      explanation: "5! = 5 × 4 × 3 × 2 × 1 = 120.",
+    },
+    {
+      question: "What type of number is 7?",
+      options: ["Even", "Composite", "Prime", "Negative"],
+      answer: "Prime",
+      explanation:
+        "A prime number has exactly two divisors: 1 and itself. 7 is divisible only by 1 and 7.",
+    },
+  ],
+
+  "social-sciences": [
+    {
+      question:
+        "What is the name of the theory that individuals and groups strive to maximize their own advantage in a situation?",
+      options: [
+        "Social Learning Theory",
+        "Rational Choice Theory",
+        "Game Theory",
+        "Conflict Theory",
+      ],
+      answer: "Rational Choice Theory",
+      explanation:
+        "Rational Choice Theory suggests people act rationally to maximize personal benefit or minimize loss.",
+    },
+    {
+      question:
+        "In psychology, what is the term for a mental shortcut that allows people to solve problems and make judgments quickly and efficiently?",
+      options: [
+        "Cognitive bias",
+        "Heuristic",
+        "Algorithmic thinking",
+        "Schema",
+      ],
+      answer: "Heuristic",
+      explanation:
+        "Heuristics are quick decision-making shortcuts that save time but can sometimes lead to biases.",
+    },
+    {
+      question:
+        "What is the study of human societies, their interactions, and the processes that preserve and change them?",
+      options: ["Anthropology", "Sociology", "Political Science", "Psychology"],
+      answer: "Sociology",
+      explanation:
+        "Sociology focuses on how human societies function, evolve, and influence individuals.",
+    },
+    {
+      question: "Who is considered the founder of modern sociology?",
+      options: ["Karl Marx", "Émile Durkheim", "Max Weber", "Auguste Comte"],
+      answer: "Auguste Comte",
+      explanation:
+        "Auguste Comte is credited with coining the term 'sociology' and developing it as a distinct field.",
+    },
+    {
+      question:
+        "What is the term for a group of people who share a common culture, language, or history, but do not have a recognized state of their own?",
+      options: ["Tribe", "Diaspora", "Nation", "Ethnic group"],
+      answer: "Nation",
+      explanation:
+        "A nation is a cultural or ethnic group bound by shared identity but not necessarily political sovereignty.",
+    },
+    {
+      question:
+        "What is the term for the process by which a person learns and adopts the behavior, norms, and values of their society?",
+      options: [
+        "Assimilation",
+        "Acculturation",
+        "Enculturation",
+        "Socialization",
+      ],
+      answer: "Socialization",
+      explanation:
+        "Socialization is the lifelong process of learning societal norms and roles.",
+    },
+    {
+      question:
+        "In economics, what is the term for a situation where a single company or group owns all or nearly all of the market for a given type of product or service?",
+      options: ["Oligopoly", "Cartel", "Monopoly", "Duopoly"],
+      answer: "Monopoly",
+      explanation:
+        "A monopoly exists when one company dominates the entire market, limiting competition.",
+    },
+    {
+      question:
+        "What is the name of the famous experiment conducted by Philip Zimbardo to study the psychological effects of perceived power?",
+      options: [
+        "Milgram experiment",
+        "Stanford Prison Experiment",
+        "Asch conformity experiment",
+        "Pavlov's dogs",
+      ],
+      answer: "Stanford Prison Experiment",
+      explanation:
+        "The Stanford Prison Experiment explored how individuals behave in roles of prisoners and guards.",
+    },
+    {
+      question:
+        "What is the term for the system of government in which power is divided between a central authority and constituent political units?",
+      options: ["Unitary system", "Federalism", "Confederation", "Autocracy"],
+      answer: "Federalism",
+      explanation:
+        "Federalism splits power between a national government and regional governments.",
+    },
+    {
+      question:
+        "What is the name of the social and political theory that advocates for the rights and interests of women?",
+      options: ["Humanism", "Feminism", "Activism", "Egalitarianism"],
+      answer: "Feminism",
+      explanation:
+        "Feminism seeks equality for women in social, political, and economic spheres.",
+    },
+  ],
+
+  history: [
+    {
+      question: "What treaty officially ended World War I?",
+      options: [
+        "Treaty of Paris",
+        "Treaty of Versailles",
+        "Treaty of Ghent",
+        "Treaty of Tordesillas",
+      ],
+      answer: "Treaty of Versailles",
+      explanation:
+        "Signed in 1919, it officially ended WWI and imposed heavy reparations on Germany.",
+    },
+    {
+      question: "Who was the first President of the United States?",
+      options: [
+        "Thomas Jefferson",
+        "John Adams",
+        "George Washington",
+        "James Madison",
+      ],
+      answer: "George Washington",
+      explanation:
+        "George Washington became the first U.S. president in 1789 after leading the country to independence.",
+    },
+    {
+      question: "In which year did the Berlin Wall fall?",
+      options: ["1985", "1987", "1989", "1991"],
+      answer: "1989",
+      explanation:
+        "The Berlin Wall fell in 1989, symbolizing the end of the Cold War and German reunification.",
+    },
+    {
+      question: "Which empire was ruled by Genghis Khan?",
+      options: [
+        "Roman Empire",
+        "Mongol Empire",
+        "Ottoman Empire",
+        "Persian Empire",
+      ],
+      answer: "Mongol Empire",
+      explanation:
+        "Genghis Khan founded and ruled the Mongol Empire, which became the largest contiguous empire in history.",
+    },
+    {
+      question: "Who was known as the 'Iron Lady'?",
+      options: [
+        "Indira Gandhi",
+        "Golda Meir",
+        "Margaret Thatcher",
+        "Angela Merkel",
+      ],
+      answer: "Margaret Thatcher",
+      explanation:
+        "Margaret Thatcher earned the nickname 'Iron Lady' for her strong leadership as UK Prime Minister.",
+    },
+    {
+      question:
+        "Which war was fought between the North and South regions in the United States?",
+      options: [
+        "Revolutionary War",
+        "World War I",
+        "American Civil War",
+        "Spanish-American War",
+      ],
+      answer: "American Civil War",
+      explanation:
+        "The American Civil War (1861–1865) was fought over slavery and states' rights.",
+    },
+    {
+      question:
+        "What ancient civilization built the Machu Picchu complex in Peru?",
+      options: ["Aztec", "Inca", "Maya", "Olmec"],
+      answer: "Inca",
+      explanation:
+        "Machu Picchu was built by the Inca civilization around the 15th century.",
+    },
+    {
+      question: "Who was the first man to step on the moon?",
+      options: [
+        "Buzz Aldrin",
+        "Yuri Gagarin",
+        "Neil Armstrong",
+        "Michael Collins",
+      ],
+      answer: "Neil Armstrong",
+      explanation:
+        "Neil Armstrong stepped on the moon in 1969, famously saying 'That's one small step for man...'",
+    },
+    {
+      question: "Which country was the first to grant women the right to vote?",
+      options: ["United States", "New Zealand", "Sweden", "United Kingdom"],
+      answer: "New Zealand",
+      explanation:
+        "New Zealand granted women the right to vote in 1893, becoming the first country to do so.",
+    },
+    {
+      question: "The Cold War was primarily between which two superpowers?",
+      options: [
+        "United States and Germany",
+        "United States and Soviet Union",
+        "China and Soviet Union",
+        "United Kingdom and Germany",
+      ],
+      answer: "United States and Soviet Union",
+      explanation:
+        "The Cold War (1947–1991) was a period of political tension between the US and the USSR.",
+    },
+  ],
+
+  biology: [
+    {
+      question: "What is the powerhouse of the cell?",
+      options: ["Nucleus", "Ribosome", "Mitochondria", "Cytoplasm"],
+      answer: "Mitochondria",
+      explanation:
+        "Mitochondria generate energy in the form of ATP, powering cell activities.",
+    },
+    {
+      question: "What pigment gives plants their green color?",
+      options: ["Melanin", "Chlorophyll", "Carotene", "Xanthophyll"],
+      answer: "Chlorophyll",
+      explanation:
+        "Chlorophyll absorbs light for photosynthesis and reflects green light, making plants appear green.",
+    },
+    {
+      question: "What is the basic unit of life?",
+      options: ["Atom", "Molecule", "Cell", "Organ"],
+      answer: "Cell",
+      explanation:
+        "Cells are the smallest structural and functional units of life.",
+    },
+    {
+      question: "Which part of the human brain controls balance?",
+      options: ["Cerebrum", "Cerebellum", "Medulla", "Hypothalamus"],
+      answer: "Cerebellum",
+      explanation:
+        "The cerebellum helps maintain balance and coordinate voluntary muscle movement.",
+    },
+    {
+      question: "What is the process by which plants make their own food?",
+      options: [
+        "Respiration",
+        "Transpiration",
+        "Photosynthesis",
+        "Fermentation",
+      ],
+      answer: "Photosynthesis",
+      explanation:
+        "Photosynthesis uses sunlight, CO₂, and water to produce glucose and oxygen.",
+    },
+    {
+      question: "What blood type is known as the universal donor?",
+      options: ["A", "B", "AB", "O negative"],
+      answer: "O negative",
+      explanation:
+        "O negative blood lacks A, B, and Rh antigens, making it compatible with all other blood types.",
+    },
+    {
+      question:
+        "Which gas do humans exhale that plants use for photosynthesis?",
+      options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Methane"],
+      answer: "Carbon Dioxide",
+      explanation:
+        "Humans exhale carbon dioxide, which plants use as a raw material in photosynthesis.",
+    },
+    {
+      question: "What type of blood cells help fight infections?",
+      options: ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
+      answer: "White blood cells",
+      explanation:
+        "White blood cells defend the body against bacteria, viruses, and foreign substances.",
+    },
+    {
+      question: "Which organ filters waste from the blood?",
+      options: ["Liver", "Heart", "Kidneys", "Lungs"],
+      answer: "Kidneys",
+      explanation:
+        "The kidneys filter waste products from blood to form urine.",
+    },
+    {
+      question: "What macromolecule are enzymes made of?",
+      options: ["Lipids", "Proteins", "Carbohydrates", "Nucleic acids"],
+      answer: "Proteins",
+      explanation:
+        "Enzymes are specialized proteins that catalyze biochemical reactions.",
+    },
+  ],
+
+  religion: [
+    {
+      question: "Who is considered the founder of Buddhism?",
+      options: ["Laozi", "Confucius", "Mahavira", "Siddhartha Gautama"],
+      answer: "Siddhartha Gautama",
+      explanation:
+        "Siddhartha Gautama, known as the Buddha, founded Buddhism in ancient India.",
+    },
+    {
+      question: "Which religious text is considered holy in Islam?",
+      options: ["Bible", "Quran", "Torah", "Vedas"],
+      answer: "Quran",
+      explanation:
+        "The Quran is the holy book of Islam, believed to be the word of God as revealed to Prophet Muhammad.",
+    },
+    {
+      question: "What is the Jewish day of rest called?",
+      options: ["Ramadan", "Sabbath", "Lent", "Diwali"],
+      answer: "Sabbath",
+      explanation:
+        "The Sabbath (Shabbat) is observed from Friday evening to Saturday evening as a day of rest.",
+    },
+    {
+      question: "In Christianity, who was the mother of Jesus?",
+      options: ["Mary Magdalene", "Elizabeth", "Mary", "Martha"],
+      answer: "Mary",
+      explanation:
+        "Mary, often referred to as the Virgin Mary, was the mother of Jesus Christ.",
+    },
+    {
+      question: "What is the holiest city in Islam?",
+      options: ["Jerusalem", "Mecca", "Medina", "Baghdad"],
+      answer: "Mecca",
+      explanation:
+        "Mecca is the birthplace of Prophet Muhammad and the destination of the Hajj pilgrimage.",
+    },
+    {
+      question: "In Hinduism, who is considered the preserver of the universe?",
+      options: ["Shiva", "Brahma", "Vishnu", "Ganesha"],
+      answer: "Vishnu",
+      explanation:
+        "Vishnu is the preserver in the Hindu trinity, responsible for maintaining cosmic order.",
+    },
+    {
+      question:
+        "Which religious festival celebrates the resurrection of Jesus?",
+      options: ["Christmas", "Good Friday", "Easter", "Pentecost"],
+      answer: "Easter",
+      explanation:
+        "Easter marks Jesus' resurrection from the dead on the third day after his crucifixion.",
+    },
+    {
+      question: "What is the first book of the Bible?",
+      options: ["Exodus", "Leviticus", "Genesis", "Numbers"],
+      answer: "Genesis",
+      explanation:
+        "Genesis is the first book of the Bible, describing creation and early human history.",
+    },
+    {
+      question: "What is the central belief of monotheistic religions?",
+      options: ["Many gods", "No gods", "One God", "Reincarnation"],
+      answer: "One God",
+      explanation:
+        "Monotheistic religions such as Christianity, Islam, and Judaism believe in a single deity.",
+    },
+    {
+      question: "In Sikhism, what is the name of the central place of worship?",
+      options: ["Temple", "Mosque", "Gurdwara", "Monastery"],
+      answer: "Gurdwara",
+      explanation:
+        "A Gurdwara is a Sikh place of worship, meaning 'gateway to the guru'.",
+    },
+  ],
+
+  politicalScience: [
+    {
+      question:
+        "What is a system of government in which a single party or person holds absolute power?",
+      options: ["Democracy", "Oligarchy", "Monarchy", "Autocracy"],
+      answer: "Autocracy",
+      explanation:
+        "Autocracy is a system where one ruler holds unlimited political power.",
+    },
+    {
+      question:
+        "What is the term for the right to vote in political elections?",
+      options: ["Suffrage", "Amnesty", "Mandate", "Referendum"],
+      answer: "Suffrage",
+      explanation: "Suffrage refers to the legal right to vote in elections.",
+    },
+    {
+      question:
+        "Which political system divides power between national and state governments?",
+      options: ["Confederation", "Federalism", "Unitary", "Dictatorship"],
+      answer: "Federalism",
+      explanation:
+        "Federalism shares power between a central government and regional governments.",
+    },
+    {
+      question: "Who is known as the 'Father of the U.S. Constitution'?",
+      options: [
+        "George Washington",
+        "James Madison",
+        "Thomas Jefferson",
+        "Alexander Hamilton",
+      ],
+      answer: "James Madison",
+      explanation:
+        "James Madison drafted the Constitution and is recognized as its principal architect.",
+    },
+    {
+      question: "What is the principle that no one is above the law?",
+      options: [
+        "Separation of Powers",
+        "Rule of Law",
+        "Judicial Review",
+        "Due Process",
+      ],
+      answer: "Rule of Law",
+      explanation:
+        "Rule of Law ensures that everyone, including leaders, must follow the law.",
+    },
+    {
+      question: "Which document starts with 'We the People'?",
+      options: [
+        "Declaration of Independence",
+        "Bill of Rights",
+        "U.S. Constitution",
+        "Magna Carta",
+      ],
+      answer: "U.S. Constitution",
+      explanation:
+        "The U.S. Constitution begins with the preamble 'We the People'.",
+    },
+    {
+      question: "What is the term for a legislature with two houses?",
+      options: ["Unicameral", "Bicameral", "Confederal", "Pluralist"],
+      answer: "Bicameral",
+      explanation:
+        "Bicameral legislatures, like the U.S. Congress, have two chambers (Senate & House).",
+    },
+    {
+      question: "Which philosopher wrote 'The Social Contract'?",
+      options: [
+        "John Locke",
+        "Thomas Hobbes",
+        "Jean-Jacques Rousseau",
+        "Montesquieu",
+      ],
+      answer: "Jean-Jacques Rousseau",
+      explanation:
+        "Rousseau's 'The Social Contract' argues that government should represent the general will.",
+    },
+    {
+      question:
+        "What is the system called where citizens elect representatives to make decisions for them?",
+      options: [
+        "Direct democracy",
+        "Representative democracy",
+        "Monarchy",
+        "Oligarchy",
+      ],
+      answer: "Representative democracy",
+      explanation:
+        "Representative democracy allows citizens to choose leaders who make laws on their behalf.",
+    },
+    {
+      question: "What is the power of courts to declare laws unconstitutional?",
+      options: [
+        "Habeas Corpus",
+        "Judicial Review",
+        "Veto",
+        "Checks and Balances",
+      ],
+      answer: "Judicial Review",
+      explanation:
+        "Judicial review allows courts to strike down laws that violate a constitution.",
+    },
+  ],
+
+  general: [
+    {
+      question: "What is the largest living species of lizard?",
+      options: ["Gila monster", "Komodo Dragon", "Iguana", "Monitor Lizard"],
+      answer: "Komodo Dragon",
+      explanation:
+        "Komodo Dragons can grow up to 3 meters long and are native to Indonesia.",
+    },
+    {
+      question: "Which planet is known as the Red Planet?",
+      options: ["Venus", "Mars", "Jupiter", "Mercury"],
+      answer: "Mars",
+      explanation: "Mars appears red due to iron oxide (rust) on its surface.",
+    },
+    {
+      question: "What is the capital city of Japan?",
+      options: ["Beijing", "Seoul", "Tokyo", "Kyoto"],
+      answer: "Tokyo",
+      explanation:
+        "Tokyo is Japan’s capital and the most populous metropolitan area in the world.",
+    },
+    {
+      question: "Which ocean is the largest on Earth?",
+      options: [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Pacific Ocean",
+        "Arctic Ocean",
+      ],
+      answer: "Pacific Ocean",
+      explanation:
+        "The Pacific Ocean covers more area than all landmasses combined.",
+    },
+    {
+      question: "How many continents are there on Earth?",
+      options: ["5", "6", "7", "8"],
+      answer: "7",
+      explanation:
+        "Earth’s continents are Africa, Antarctica, Asia, Australia, Europe, North America, South America.",
+    },
+    {
+      question: "What is the main ingredient in guacamole?",
+      options: ["Tomato", "Avocado", "Cucumber", "Lettuce"],
+      answer: "Avocado",
+      explanation: "Avocado is the creamy base of guacamole, a popular dip.",
+    },
+    {
+      question: "Which instrument is used to measure temperature?",
+      options: ["Barometer", "Thermometer", "Hygrometer", "Anemometer"],
+      answer: "Thermometer",
+      explanation:
+        "Thermometers measure temperature in Celsius, Fahrenheit, or Kelvin.",
+    },
+    {
+      question: "What is the fastest land animal?",
+      options: ["Lion", "Horse", "Cheetah", "Leopard"],
+      answer: "Cheetah",
+      explanation:
+        "Cheetahs can sprint up to 112 km/h (70 mph) for short bursts.",
+    },
+    {
+      question: "In which country would you find the Great Pyramid of Giza?",
+      options: ["Mexico", "Egypt", "India", "Peru"],
+      answer: "Egypt",
+      explanation:
+        "The Great Pyramid is one of the Seven Wonders of the Ancient World, located near Cairo.",
+    },
+    {
+      question: "What gas do humans exhale that plants use for photosynthesis?",
+      options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+      answer: "Carbon Dioxide",
+      explanation:
+        "Plants take in CO₂ and release O₂, creating a balanced exchange with humans.",
+    },
+  ],
+};
