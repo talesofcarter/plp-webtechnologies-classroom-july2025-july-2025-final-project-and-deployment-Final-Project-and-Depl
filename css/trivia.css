@@ -63,13 +63,13 @@
 
 .answer-btn {
   background-color: #fff;
-  color: var(--text-color);
+  color: var(--primary-color);
   border: 2px solid var(--primary-color);
   padding: 1rem;
   font-family: "Work Sans", sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  border-radius: 50px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
