@@ -15,6 +15,12 @@ a {
   z-index: 1000;
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .navbar-brand a {
   font-family: "Work Sans", sans-serif;
   font-weight: 700;

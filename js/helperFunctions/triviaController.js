@@ -19,10 +19,45 @@ const feedbackSection = document.getElementById("feedback-section");
 const feedbackTitle = document.getElementById("feedback-title");
 const explanationText = document.getElementById("explanation-text");
 
+// Confetti logic directly in the controller
+function fireConfetti() {
+  const duration = 15 * 1000,
+    animationEnd = Date.now() + duration,
+    defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 2050 };
+
+  function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  const interval = setInterval(function () {
+    const timeLeft = animationEnd - Date.now();
+
+    if (timeLeft <= 0) {
+      return clearInterval(interval);
+    }
+
+    const particleCount = 50 * (timeLeft / duration);
+
+    // since particles fall down, start a bit higher than random
+    confetti(
+      Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      })
+    );
+    confetti(
+      Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      })
+    );
+  }, 250);
+}
+
 function getCategoryFromUrl() {
   const urlParams = new URLSearchParams(window.location.search);
   const category = urlParams.get("category");
-  return category || "general"; // Default to 'general' if no category is specified
+  return category || "general";
 }
 
 function showFeedback(isCorrect, explanation) {
@@ -55,7 +90,7 @@ function handleAnswerClick(event) {
   highlightAnswer(isCorrect, selectedButton);
 
   if (isCorrect) {
-    score += 10;
+    score++;
     renderScore(score);
   }
 
@@ -68,14 +103,15 @@ function handleAnswerClick(event) {
 
   // Move to the next question after a delay
   setTimeout(() => {
-    hideFeedback(); // Hide the feedback section
+    hideFeedback();
     currentQuestionIndex++;
     if (currentQuestionIndex < currentQuestions.length) {
       startQuestion();
     } else {
       showResultsModal();
+      fireConfetti(); // Call the new confetti function when the quiz ends
     }
-  }, 10000); // 3-second delay to give user time to read
+  }, 3000);
 }
 
 function showResultsModal() {

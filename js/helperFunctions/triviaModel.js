@@ -603,7 +603,7 @@ export const questionsByCategory = {
       options: ["Mexico", "Egypt", "India", "Peru"],
       answer: "Egypt",
       explanation:
-        "The Great Pyramid is one of the Seven Wonders of the Ancient World, located near Cairo.",
+        "The Great Pyramid is one of the Seven Wonders of the Ancient World, located near Cairo, Egypt.",
     },
     {
       question: "What gas do humans exhale that plants use for photosynthesis?",
